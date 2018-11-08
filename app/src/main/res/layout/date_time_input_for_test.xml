@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/test_date_hint"
+        android:layout_margin="@dimen/horizontal_margin"
+        app:met_underlineColor="@color/colorAccent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/colorAccent"
+        app:met_floatingLabelAnimating="true"
+        app:met_floatingLabelText="@string/test_date_label"
+        android:id="@+id/test_date_editText"
+        android:cursorVisible="false"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/test_time_hint"
+        android:layout_margin="@dimen/horizontal_margin"
+        app:met_underlineColor="@color/colorAccent"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelTextColor="@color/colorAccent"
+        app:met_floatingLabelAnimating="true"
+        app:met_floatingLabelText="@string/test_time_label"
+        android:id="@+id/test_time_editText"
+        android:cursorVisible="false"/>
+
+</LinearLayout>

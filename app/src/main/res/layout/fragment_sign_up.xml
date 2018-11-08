@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="false">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/sign_up_dialog_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:id="@+id/scroll_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/phone_number_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/buttons_bottom_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="@dimen/buttons_bottom_margin"
+                android:hint="@string/fui_phone_hint"
+                android:inputType="phone"
+                app:met_floatingLabel="highlight"
+                app:met_underlineColor="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/date_of_birth_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:cursorVisible="false"
+                android:hint="@string/date_of_birth_hint"
+                android:inputType="phone"
+                app:met_floatingLabel="highlight"
+                app:met_underlineColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/gender"
+                android:textAppearance="@style/FirebaseUI.Text.Heading" />
+
+            <RadioGroup
+                android:id="@+id/gender_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radio_gender_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/male" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radio_gender_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/female" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radio_gender_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/gender_other" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/no_gender_selected_error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/no_gender_selected"
+                android:textAppearance="@style/TextAppearance.Design.Error"
+                android:textColor="@color/error_red"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/FirebaseUI.Text.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/register_as_text" />
+
+            <RadioGroup
+                android:id="@+id/role_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/patient_radio_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:padding="8dp"
+                    android:text="@string/patient_text" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/doctor_radio_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/doctor" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/admin_radio_group"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/admin" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/sign_up_button"
+                style="@style/FirebaseUI.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/buttons_bottom_margin"
+                android:text="@string/sign_up_button_text" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/sign_up_fragment_progress_bar"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_register_patients"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_margin="@dimen/horizontal_margin"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_number_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:met_underlineColor="@color/colorAccent"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:hint="@string/register_number"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_floatingLabelAnimating="true"
+                app:met_maxCharacters="5"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/register_name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:inputType="textPersonName|textCapWords"
+                app:met_underlineColor="@color/colorAccent"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                android:hint="@string/register_name"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelText="@string/fui_name_hint"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/top_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginBottom="@dimen/buttons_bottom_margin"
+                android:text="@string/register_button_text"
+                style="@style/ButtonStyle"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/register_patient_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/authentication_state_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gnomikx_logo"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginBottom="48dp"
+            android:contentDescription="@string/gnomikx_logo_content_description"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:text="@string/sign_in_with_gnomikx_account"
+            android:id="@+id/sign_in_and_username_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/gnomikx_email_id"
+            android:id="@+id/email_text"
+            android:visibility="invisible"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ButtonStyle"
+            android:text="@string/send_verification_email"
+            android:id="@+id/resend_verification_email_button"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/sign_out_button_text"
+            android:id="@+id/sign_out"
+            android:visibility="gone"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="@dimen/buttons_bottom_margin"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_button_text"
+            android:id="@+id/sign_in_button"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="@dimen/buttons_bottom_margin"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gnomikx.www.gnomikx.DisplayUserDetailsFragment"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_user_name"
+        android:layout_margin="@dimen/horizontal_margin"
+        tools:text="Name: Mayank Jasoria"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_user_dob"
+        android:layout_margin="@dimen/horizontal_margin"
+        tools:text="Date of birth: 08 Apr 1998 "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_user_gender"
+        android:layout_margin="@dimen/horizontal_margin"
+        tools:text="Gender: Male"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_user_email"
+        android:layout_margin="@dimen/horizontal_margin"
+        tools:text="Email ID: jasoriamayank@gmail.com"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_user_phone"
+        android:layout_margin="@dimen/horizontal_margin"
+        tools:text="Phone number: 9983670595"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:text="@string/call_user"
+        android:id="@+id/call_user_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:text="@string/send_email_to_user"
+        android:id="@+id/send_email_to_user_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtonStyle"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:text="@string/upload_report"
+        android:id="@+id/upload_report_button"/>
+
+</LinearLayout>

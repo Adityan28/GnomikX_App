@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home_id"
+            android:title="@string/nav_home"
+            android:icon="@drawable/ic_home_24dp"
+            android:checked="true"/>
+        <item
+            android:id="@+id/nav_sign_id"
+            android:title="@string/nav_sign"
+            android:icon="@drawable/ic_sign_in_24dp"/>
+        <item
+            android:id="@+id/nav_bmi_id"
+            android:title="@string/nav_bmi"
+            android:icon="@drawable/ic_accessibility_black_24dp"/>
+        <item
+            android:id="@+id/nav_genetic_test_id"
+            android:title="@string/nav_genetic_tests"
+            android:icon="@drawable/ic_genetic_tests_24dp"/>
+        <item
+            android:id="@+id/nav_register_patients_id"
+            android:title="@string/nav_register_patients"
+            android:icon="@drawable/ic_register_patients_24dp"/>
+        <item
+            android:id="@+id/nav_queries_id"
+            android:title="@string/nav_queries"
+            android:icon="@drawable/ic_query_24dp" />
+        <item
+            android:id="@+id/nav_submit_blog_id"
+            android:title="@string/nav_submit_blog"
+            android:icon="@drawable/ic_submit_blog_24dp"/>
+        <item
+            android:id="@+id/nav_my_account_id"
+            android:title="@string/nav_my_account"
+            android:icon="@drawable/ic_my_account_24dp"/>
+
+        <!--Admin level access only-->
+        <item
+            android:id="@+id/nav_see_users_id"
+            android:title="@string/all_users"
+            android:icon="@drawable/ic_see_users_24dp"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_see_queries"
+            android:title="@string/view_all_queries"
+            android:icon="@drawable/ic_all_queries_24px"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_submitted_blogs"
+            android:title="@string/blogs_awaiting_approval"
+            android:icon="@drawable/ic_approve_blogs"
+            android:visible="false"/>
+
+    </group>
+</menu>

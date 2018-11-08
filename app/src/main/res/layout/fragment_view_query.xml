@@ -1,0 +1,67 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_query_date"
+            tools:text="04 MAR 2018"
+            android:layout_marginTop="@dimen/default_padding_bottom"
+            android:layout_marginBottom="@dimen/default_padding_bottom"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_query_heading"
+            tools:text="Heading"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_marginTop="@dimen/default_padding_bottom"
+            android:layout_marginBottom="@dimen/default_padding_bottom"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_query_body"
+            tools:text="Description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_marginTop="@dimen/default_padding_bottom"
+            android:layout_marginBottom="@dimen/default_padding_bottom"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:id="@+id/view_query_response"
+            android:text="@string/awaiting_response_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
+        </LinearLayout>
+
+    </ScrollView>

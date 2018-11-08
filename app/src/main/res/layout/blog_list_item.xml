@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/image_of_blog_content_description"
+            android:id="@+id/headline_image"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            tools:src="@mipmap/ic_launcher" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:layout_alignBottom="@id/headline_image"
+            android:background="@drawable/gradient_blog_images"/>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:fontFamily="sans-serif"
+            android:elegantTextHeight="true"
+            android:layout_alignBottom="@id/headline_image"
+            android:textSize="20sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@android:color/white"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            tools:text="Headline text"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/trailText"
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:elegantTextHeight="true"
+        android:fontFamily="sans-serif"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textSize="14sp"
+        tools:text="@string/dummy_trail_text"
+        android:textColor="#B2FFFFFF" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#303030">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            tools:text="12th march 2017"
+            android:fontFamily="sans-serif"
+            android:textSize="12sp"
+            android:elegantTextHeight="true"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

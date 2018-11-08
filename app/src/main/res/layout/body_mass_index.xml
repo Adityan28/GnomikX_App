@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi_calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/horizontal_margin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/units"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <Spinner
+            android:id="@+id/height_unit_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginLeft="@dimen/horizontal_margin"/>
+
+    </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/bmi_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:met_floatingLabel="highlight"
+        app:met_floatingLabelAnimating="true"
+        app:met_floatingLabelTextColor="@color/colorAccent"
+        app:met_textColorHint="@android:color/darker_gray"
+        app:met_underlineColor="@color/colorAccent"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:hint="@string/bmi_height_hint"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/bmi_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:met_floatingLabelTextColor="@color/colorAccent"
+        app:met_underlineColor="@color/colorAccent"
+        app:met_floatingLabel="highlight"
+        app:met_textColorHint="@android:color/darker_gray"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:hint="@string/bmi_weight_hint"/>
+
+    <TextView
+        android:id="@+id/bmi_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_margin="@dimen/horizontal_margin"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/bmi_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_margin="@dimen/horizontal_margin"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/bmi_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/buttons_bottom_margin"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:text="@string/bmi_button_text"
+        style="@style/ButtonStyle"
+        android:layout_gravity="bottom"/>
+
+</LinearLayout>
+

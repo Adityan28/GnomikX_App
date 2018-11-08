@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorPrimaryDark">#689F38</color>
+    <color name="colorAccent">#0091EA</color>
+
+    <color name="background">#303030</color>
+    <color name="whitedivider">#1EFFFFFF</color>
+    <color name="blackOlive">#39393F</color>
+    <color name="orange">#FEC500</color>
+    <color name="bg_tag_default">#7cd167</color>
+    <color name="recycler_view_background">#EEEEEE</color>
+
+    <color name="button_pressed_background">#03A9F4</color>
+    <color name="button_enabled_background">#0288D1</color>
+    <color name="button_disabled_background">#C0C0C0</color>
+    <color name="error_red">#D50000</color>
+    <color name="gradient_start_color">#80BDBDBD</color>
+    <color name="gradient_center_color">#80EEEEEE</color>
+    <color name="white">#50FFFFFF</color>
+</resources>

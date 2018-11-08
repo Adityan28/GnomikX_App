@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:gravity="center"
+                android:text="@string/nav_submit_blog"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <ImageView
+                android:id="@+id/submit_blog_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:contentDescription="@string/image_of_blog_content_description"
+                android:scaleType="fitXY"
+                android:background="@color/mdtp_calendar_selected_date_text"/>
+
+            <Button
+                android:id="@+id/upload_image_button"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:text="@string/upload_image" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:id="@+id/remove_image_button"
+                android:text="@string/remove_image"
+                style="@style/ButtonStyle"
+                android:visibility="gone"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/submit_blog_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:hint="@string/blog_heading"
+                app:met_floatingLabel="highlight"
+                android:inputType="text|textMultiLine|textCapSentences"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_underlineColor="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/submit_blog_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:hint="@string/blog_body"
+                android:inputType="text|textMultiLine|textCapSentences"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_underlineColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                android:text="@string/add_tags_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--View group for the tags checkboxes-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/diabetes_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/diabetes" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/obesity_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/obesity" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/general_health_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/horizontal_margin"
+                    android:layout_marginStart="@dimen/horizontal_margin"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="@string/general_health" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/no_tags_selected_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="4dp"
+                android:text="@string/no_tags_selected_error"
+                android:textColor="@android:color/holo_red_light"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/submit_blog_submit_button"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/buttons_bottom_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/submit_text" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/submit_blog_progress_bar"/>
+
+</android.support.constraint.ConstraintLayout>

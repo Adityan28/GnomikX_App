@@ -1,0 +1,123 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.gnomikx.www.gnomikx.QueryResponseFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/query_response_date"
+                tools:text="04 MAR 2018"
+                android:layout_marginTop="@dimen/default_padding_bottom"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/query_response_username"
+                tools:text="Mayank Jasoria"
+                android:layout_marginTop="@dimen/default_padding_bottom"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/query_response_heading"
+                tools:text="Heading"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:layout_marginTop="@dimen/default_padding_bottom"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/query_response_body"
+                tools:text="Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:layout_marginTop="@dimen/default_padding_bottom"
+                android:layout_marginBottom="@dimen/default_padding_bottom"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginStart="@dimen/horizontal_margin"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_margin"
+                app:met_underlineColor="@color/colorAccent"
+                android:inputType="text|textCapSentences|textMultiLine"
+                android:hint="@string/query_response_hint"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextColor="@color/colorAccent"
+                app:met_floatingLabelText="@string/query_response_label_text"
+                android:id="@+id/query_response_edit_text"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/buttons_bottom_margin"
+                style="@style/ButtonStyle"
+                android:text="@string/post_response"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginLeft="@dimen/horizontal_margin"
+                android:layout_marginRight="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:id="@+id/post_response_button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/query_response_progress_bar"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>

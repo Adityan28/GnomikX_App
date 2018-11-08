@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gnomikx.www.gnomikx.BlogFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filters"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:paddingTop="8dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:elevation="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diabetes"
+            android:id="@+id/diabetes_filter"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/obesity"
+            android:id="@+id/obesity_filter"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/general_health"
+            android:id="@+id/general_health_filter"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/blog_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/blogs_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/nothing_to_display_text"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

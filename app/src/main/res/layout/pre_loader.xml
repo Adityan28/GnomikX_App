@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/quote_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/preloader_quote"/>
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/quote_textView"
+        android:layout_margin="@dimen/horizontal_margin"/>
+
+    <ImageView
+        android:id="@+id/gnomikx_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/logo_top_margin"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:scaleType="fitXY"
+        android:src="@drawable/gnomikx_logo"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/gnomokx_logo_content_description"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
